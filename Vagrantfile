@@ -2,9 +2,9 @@
 # vi: set ft=ruby :
 
 Vagrant.configure("2") do |config|
-  config.vm.box = "Centos6.3"
-  config.vm.box_url = "https://dl.dropbox.com/u/7225008/Vagrant/CentOS-6.3-x86_64-minimal.box"
-  config.vm.network :private_network, ip: "192.168.50.10"
+  config.vm.box = "puphpet/centos65-x64"
+  config.vm.box_url = "puphpet/centos65-x64"
+  config.vm.network :private_network, ip: "192.168.56.103"
   
   config.vm.provision :puppet do |puppet|
     puppet.manifests_path = "puppet/manifests"
